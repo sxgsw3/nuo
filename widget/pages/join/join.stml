@@ -1,0 +1,43 @@
+<template>
+	<view class="page">
+		<scroll-view>
+			<!-- 企业宣传图 -->
+			<hoc-banner-cover-es />
+			<!-- 企业分类列表 -->
+			<hoc-sort-list-es />
+			<!-- 企业分类内容 -->
+			<hoc-sort-content-es />
+			<!-- 加入表单 -->
+			<hoc-join-form-es />
+		</scroll-view>
+	</view>
+</template>
+<script>
+import '../../components/hoc-banner-cover-es.stml'
+import '../../components/hoc-sort-list-es.stml'
+import '../../components/hoc-sort-content-es.stml'
+import '../../components/hoc-join-form-es.stml'
+export default {
+	name: 'join',
+	apiready() {//like created
+
+	},
+	data() {
+		return {
+			
+		}
+	},
+	methods: {
+
+	}
+}
+</script>
+<style>
+.page {
+	height: 100%;
+	background-color: #f7f7f7;
+}
+scroll-view {
+	height: 100%;
+}
+</style>

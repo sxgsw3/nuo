@@ -1,0 +1,23 @@
+<template>
+	<view class="company-detail">
+		<rich-text :nodes='html_detail' />
+	</view>
+</template>
+<script>
+export default {
+	name: 'hoc-company-detail-es',
+	props: {
+		html_detail: {
+			type: String,
+			default: ''
+		}
+	},
+	data(){
+		return{
+			html_detail:this.props.html_detail || "<p><img style='width:100%' src='http://a3a17abb08c7cc355eb5.qiniucdn.apicloud-system.com/apicloud/012458c067707bb7ec2eab06cd88f1be.png' /></p>\n<p><img style='width:100%' src='http://a3a17abb08c7cc355eb5.qiniucdn.apicloud-system.com/apicloud/1d91c1f29e2ead1a11edbc43f3584dbd.png' /></p>"
+		}
+	}
+}
+</script>
+<style>
+</style>

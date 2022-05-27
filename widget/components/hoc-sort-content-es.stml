@@ -1,0 +1,58 @@
+<template>
+	<view class="sotr-content">
+		<view class="sc-content-item" v-for="(item,index) in list" id={'content'+item.id}>
+			<text class="sc-content-title">{item.title}</text>
+			<rich-text nodes={item.content} />
+		</view>
+	</view>
+</template>
+<script>
+export default {
+	name:"hoc-sort-content-es",
+	props: {
+		list: {
+			type: Array,
+			default: function () {
+				return []
+			}
+		}
+	},
+	data(){
+		return {
+			list:this.props.list || [
+					{
+					   "id": "1",
+					   "title": "代理政策",
+					   "content":"<div class=\"para\">1、基本条件要求：</div>\n<div class=\"para\">（1）选址：院线实地考察评估；</div>\n<div class=\"para\">（2）选地：影院结构、<a href=\"https://baike.baidu.com/item/%E5%B1%82%E9%AB%98\" target=\"_blank\" rel=\"noopener\">层高</a>、柱距和消防等实地评估；</div>\n<div class=\"para\">（3）<a href=\"https://baike.baidu.com/item/%E8%B5%84%E9%87%91\" target=\"_blank\" rel=\"noopener\">资金</a>：<a href=\"https://baike.baidu.com/item/%E8%9E%8D%E8%B5%84%E8%83%BD%E5%8A%9B\" target=\"_blank\" rel=\"noopener\">融资能力</a>确认、<a href=\"https://baike.baidu.com/item/%E6%8A%95%E8%B5%84\" target=\"_blank\" rel=\"noopener\">投资</a>分析。</div>"
+					 },
+					   {
+					   "id": "2",
+					   "title": "代理政策",
+					   "content":"<div class=\"para\">1、基本条件要求：</div>\n<div class=\"para\">（1）选址：院线实地考察评估；</div>\n<div class=\"para\">（2）选地：影院结构、<a href=\"https://baike.baidu.com/item/%E5%B1%82%E9%AB%98\" target=\"_blank\" rel=\"noopener\">层高</a>、柱距和消防等实地评估；</div>\n<div class=\"para\">（3）<a href=\"https://baike.baidu.com/item/%E8%B5%84%E9%87%91\" target=\"_blank\" rel=\"noopener\">资金</a>：<a href=\"https://baike.baidu.com/item/%E8%9E%8D%E8%B5%84%E8%83%BD%E5%8A%9B\" target=\"_blank\" rel=\"noopener\">融资能力</a>确认、<a href=\"https://baike.baidu.com/item/%E6%8A%95%E8%B5%84\" target=\"_blank\" rel=\"noopener\">投资</a>分析。</div>"
+					 },
+					   {
+					   "id": "3",
+					   "title": "代理政策",
+					   "content":"<div class=\"para\">1、基本条件要求：</div>\n<div class=\"para\">（1）选址：院线实地考察评估；</div>\n<div class=\"para\">（2）选地：影院结构、<a href=\"https://baike.baidu.com/item/%E5%B1%82%E9%AB%98\" target=\"_blank\" rel=\"noopener\">层高</a>、柱距和消防等实地评估；</div>\n<div class=\"para\">（3）<a href=\"https://baike.baidu.com/item/%E8%B5%84%E9%87%91\" target=\"_blank\" rel=\"noopener\">资金</a>：<a href=\"https://baike.baidu.com/item/%E8%9E%8D%E8%B5%84%E8%83%BD%E5%8A%9B\" target=\"_blank\" rel=\"noopener\">融资能力</a>确认、<a href=\"https://baike.baidu.com/item/%E6%8A%95%E8%B5%84\" target=\"_blank\" rel=\"noopener\">投资</a>分析。</div>"
+					 },
+					 {
+					   "id": "4",
+					   "title": "代理政策",
+					   "content":"<div class=\"para\">1、基本条件要求：</div>\n<div class=\"para\">（1）选址：院线实地考察评估；</div>\n<div class=\"para\">（2）选地：影院结构、<a href=\"https://baike.baidu.com/item/%E5%B1%82%E9%AB%98\" target=\"_blank\" rel=\"noopener\">层高</a>、柱距和消防等实地评估；</div>\n<div class=\"para\">（3）<a href=\"https://baike.baidu.com/item/%E8%B5%84%E9%87%91\" target=\"_blank\" rel=\"noopener\">资金</a>：<a href=\"https://baike.baidu.com/item/%E8%9E%8D%E8%B5%84%E8%83%BD%E5%8A%9B\" target=\"_blank\" rel=\"noopener\">融资能力</a>确认、<a href=\"https://baike.baidu.com/item/%E6%8A%95%E8%B5%84\" target=\"_blank\" rel=\"noopener\">投资</a>分析。</div>"
+					 }
+				   ]
+		}
+	}
+}
+</script>
+<style scoped>
+.sotr-content {
+	padding: 10px 15px;
+	background-color: #fff;
+	top: -9px;
+}
+.sc-content-title {
+	font-weight: 500;
+	padding: 10px 0;
+}
+</style>
